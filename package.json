@@ -1,0 +1,10 @@
+{
+    "main": "./integration.js",
+    "name": "csv-to_polarity-integration",
+    "description": "Returns information on CSV that was added.",
+    "version": "3.0.0",
+    "private": true,
+    "dependencies": {
+      "papaparse": "^5.0.0"
+    }
+  }
