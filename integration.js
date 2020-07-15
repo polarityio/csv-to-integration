@@ -39,7 +39,7 @@ function doLookup(entities, options, cb) {
         entity: entity,
         displayValue: entity.value,
         data: {
-          summary: [`${event.coumnNameToBeDisplayedAsSummaryTag}`],
+          summary: [`${event.columnNameToBeDisplayedAsSummaryTag}`],
           details: event
         }
       });

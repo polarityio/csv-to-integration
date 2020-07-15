@@ -25,7 +25,7 @@ To notify users on where the data comes from for a Polarity Tag. Acronyms are ty
 *Default Polarity Entity Types* 
 By default Polarity recognizes the below entity types: 
 
-'IPv4', 'IPv4CIDR', 'IPv6', 'MD5', 'SHA1', 'SHA256', 'MAC', 'string', 'email', 'domain', 'url', 'IPv4CIDR', 'CVE'
+'IPv4', 'IPv4CIDR', 'IPv6', 'MD5', 'SHA1', 'SHA256', 'string', 'email', 'domain', 'url', 'IPv4CIDR', 'CVE'
 
 To change the entity types to one of the default ones navigate to the below line in the file and replace the '*' with the above entity types to be reckognized. 
     Example:   entityTypes: ['IPv4']
