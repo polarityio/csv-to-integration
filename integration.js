@@ -8,7 +8,7 @@ const eventLookup = new Map();
 
 function startup(logger) {
   Logger = logger;
-  const csvAsString = fs.readFileSync('./data/csvDataNeeded.csv', 'utf8');
+  const csvAsString = fs.readFileSync('./data/adfsErrorCodes.csv', 'utf8');
   let csvData = Papa.parse(csvAsString, {
     header: true,
     skipEmptyLines: true,
@@ -20,7 +20,7 @@ function startup(logger) {
   }
   Logger.debug(`Loaded ${csvData.data.length} rows`);
   csvData.data.forEach((event) => {
-    eventLookup.set(event.name_of_key_column, event);
+    eventLookup.set(event.Code, event);
   });
   
 }
@@ -39,7 +39,7 @@ function doLookup(entities, options, cb) {
         entity: entity,
         displayValue: entity.value,
         data: {
-          summary: [`${event.columnNameToBeDisplayedAsSummaryTag}`],
+          summary: [`${event.Description}`],
           details: event
         }
       });

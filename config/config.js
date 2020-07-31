@@ -1,12 +1,17 @@
 module.exports = {
-    name: 'CSV to Integration',
-    acronym: 'CSV',
-    entityTypes: ['*'],
+    name: 'ADFS Error Codes',
+    acronym: 'ADFSE',
+    //entityTypes: ['*'],
     customTypes: [
       {
-        key: 'csvLookup',
-        regex: /\d{1,6}/
-      }
+        key: 'numericCodes',
+        regex: /\d{5,8}/
+      },
+      {
+        key: 'adfsCodes',
+        regex: /AADSTS\d{5,6}/
+      },
+
     ],
     onDemandOnly: true,
     styles: ['./styles/int.less'],
@@ -27,7 +32,7 @@ module.exports = {
       }
     },
     logging: {
-      level: 'info'
+      level: 'trace'
     },
     options: []
   };
