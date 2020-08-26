@@ -1,7 +1,7 @@
 {
     "main": "./integration.js",
-    "name": "csv-to_polarity-integration",
-    "description": "Returns information on CSV that was added.",
+    "name": "ADFS_Error_Codes",
+    "description": "Azure ADFS Error Codes.",
     "version": "3.0.0",
     "private": true,
     "dependencies": {
