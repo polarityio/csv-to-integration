@@ -8,20 +8,23 @@ const eventLookup = new Map();
 
 function startup(logger) {
   Logger = logger;
-  const csvAsString = fs.readFileSync('./data/csvDataNeeded.csv', 'utf8');
-  let csvData = Papa.parse(csvAsString, {
-    header: true,
-    skipEmptyLines: true,
-    delimiter: ',',
-    quoteChar: '"'
-  });
-  if (csvData.errors.length > 0) {
-    Logger.error({ errors: csvData.errors }, 'Encountered Errors Parsing File');
-  }
-  Logger.debug(`Loaded ${csvData.data.length} rows`);
-  csvData.data.forEach((event) => {
-    eventLookup.set(event.name_of_key_column, event);
-  });
+  return function (cb) {
+    const csvAsString = fs.readFileSync('./data/csvDataNeeded.csv', 'utf8');
+    let csvData = Papa.parse(csvAsString, {
+      header: true,
+      skipEmptyLines: true,
+      delimiter: ',',
+      quoteChar: '"'
+    });
+    if (csvData.errors.length > 0) {
+      Logger.error({ errors: csvData.errors }, 'Encountered Errors Parsing File');
+    }
+    Logger.debug(`Loaded ${csvData.data.length} rows`);
+    csvData.data.forEach((event) => {
+      eventLookup.set(event.name_of_key_column, event);
+    });
+    cb(null);
+  };
 }
 
 function doLookup(entities, options, cb) {
