@@ -18,16 +18,16 @@ module.exports = {
       file: './templates/block.hbs'
     }
   },
-  summary: {
-    component: {
-      file: './components/summary.js'
-    },
-    template: {
-      file: './templates/summary.hbs'
-    }
-  },
   logging: {
     level: 'info'
+  },
+  request: {
+    cert: '',
+    key: '',
+    passphrase: '',
+    ca: '',
+    proxy: '',
+    rejectUnauthorized: true
   },
   options: []
 };
