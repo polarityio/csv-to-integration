@@ -8,6 +8,7 @@ module.exports = {
       regex: /\d{1,6}/
     }
   ],
+  defaultColor: 'light-gray',
   onDemandOnly: true,
   styles: ['./styles/int.less'],
   block: {
