@@ -1,6 +1,6 @@
 {
   "name": "csv-to_polarity-integration",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "main": "./integration.js",
   "description": "Returns information on CSV that was added.",
   "private": true,
