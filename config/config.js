@@ -1,7 +1,20 @@
 module.exports = {
   name: 'CSV to Integration',
   acronym: 'CSV',
-  entityTypes: ['*'],
+  entityTypes: [
+    'IPv4',
+    'IPv4CIDR',
+    'IPv6',
+    'domain',
+    'url',
+    'MD5',
+    'SHA1',
+    'SHA256',
+    'email',
+    'cve',
+    'MAC',
+    'string'
+  ],
   customTypes: [
     {
       key: 'csvLookup',
@@ -27,7 +40,7 @@ module.exports = {
     key: '',
     passphrase: '',
     ca: '',
-    proxy: ""
+    proxy: ''
   },
   options: []
 };
